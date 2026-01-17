@@ -1,0 +1,108 @@
+.receipt-container {
+    padding: 2rem;
+    background: white;
+    color: black;
+    width: 350px;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed black;
+}
+
+.receipt-header h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.receipt-header p {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+}
+
+.receipt-details {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.receipt-items {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed black;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.receipt-summary {
+    margin-bottom: 1.5rem;
+}
+
+.receipt-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.receipt-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.receipt-footer {
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    /* Reset Modal and Parent Layout Context */
+    .modal-overlay,
+    .modal-content,
+    .modal-body {
+        position: static !important;
+        transform: none !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+    }
+
+    #printable-receipt,
+    #printable-receipt * {
+        visibility: visible;
+    }
+
+    #printable-receipt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 350px !important;
+        /* Force thermal width */
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+}
